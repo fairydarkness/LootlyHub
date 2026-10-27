@@ -1,0 +1,53 @@
+# LootlyHub — основной конфиг. Скопируйте в configs/main.toml и заполните.
+
+[lootly]
+# Магазин → Настройки → API ключи → Сгенерировать. Показывается один раз!
+api_key = "lootly_sk_..."
+# proxy = "http://user:pass@host:port"
+
+[polling]
+orders_interval = 10      # раз в сколько секунд проверять новые заказы (не меньше 3)
+messages_interval = 20    # раз в сколько секунд проверять чаты заказов
+track_chats_hours = 72    # следить за чатами заказов не старше N часов
+
+[features]
+# Начальные значения; переключаются в Telegram (/settings) и сохраняются.
+auto_delivery = true
+auto_response = true
+greeting = false
+after_delivery = true
+auto_hide = false              # архивировать товар, когда кончился его goods-файл, и вернуть при пополнении
+auto_cancel_no_stock = false   # отменить заказ с возвратом, если товара нет
+notify_orders = true
+notify_messages = true
+notify_delivery = true
+
+[messages]
+# Переменные: $order_id $product $quantity $amount $value $fields $date
+greeting = "Привет! Заказ $order_id принят, выдаю товар…"
+after_delivery = """Спасибо за покупку «$product»!
+Товар на странице заказа. Пожалуйста, подтвердите получение 🙏"""
+no_stock = "Товар временно закончился — выдам вручную в ближайшее время."
+cancel_reason = "Нет в наличии"
+
+[telegram]
+enabled = true
+token = ""            # от @BotFather
+# Доступ без пароля для этих Telegram ID (узнать: @userinfobot)
+admins = []
+# Или вход по паролю: python main.py hash-password
+password_hash = ""
+# proxy = "socks5://user:pass@host:port"
+
+[webhook]
+# Проверка полей «запрос данных» (например, существует ли логин). Нужен публичный HTTPS.
+enabled = false
+host = "0.0.0.0"
+port = 8080
+path = "/lootly/data-request/поменяйте-на-случайную-строку"
+default_verdict = false   # ответ для полей без правила
+
+# [[webhook.rules]]
+# field = "Логин Steam"            # подпись или id поля
+# pattern = "^[A-Za-z0-9_]{3,32}$" # регулярка на всё значение; без pattern — просто «не пусто»
+# product_id = ""                  # только для этого товара

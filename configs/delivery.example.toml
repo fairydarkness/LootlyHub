@@ -1,0 +1,16 @@
+# Автовыдача. Скопируйте в configs/delivery.toml.
+# Товар должен быть с включённой внешней автоматизацией (external), иначе его заказы не попадут в API.
+# ID товаров: /products в Telegram или python main.py check.
+
+# Ключи из файла: goods/steam_keys.txt, одна строка = одна единица.
+# Для заказа с quantity = 3 выдаются 3 первые строки.
+[[product]]
+id = "6a0593652deddeb68627138c"
+goods = "steam_keys.txt"
+message = "Ваш ключ: $value\nАктивация: Steam → Игры → Активировать в Steam."
+
+# Можно сопоставлять по точному названию вместо id.
+# [[product]]
+# title = "Гайд по фарму"
+# value = "https://example.com/guide"   # статичная выдача, не расходуется
+# enabled = true

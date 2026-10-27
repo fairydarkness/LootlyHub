@@ -1,0 +1,11 @@
+services:
+  lootlyhub:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./configs:/app/configs
+      - ./goods:/app/goods
+      - ./storage:/app/storage
+      - ./logs:/app/logs
+      - ./plugins:/app/plugins
+    # ports: ["8080:8080"]   # если включён [webhook]

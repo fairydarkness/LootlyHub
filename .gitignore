@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# секреты и данные
+configs/*.toml
+!configs/*.example.toml
+goods/*
+!goods/.gitkeep
+storage/
+logs/
