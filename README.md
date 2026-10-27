@@ -1,7 +1,17 @@
 <h1 align="center">LootlyHub</h1>
 <p align="center">Бот автоматизации магазина на <a href="https://lootly.net">Lootly</a> через официальный
 <a href="https://docs.seller.lootly.net/ru/docs">Seller API</a></p>
-<p align="center">Автор: <b>@fairydarkns</b></p>
+
+## [VPN](https://t.me/fairyvpn_bot) 
+
+Если проект полезен - поставь ⭐  
+Связаться / отблагодарить - Telegram [@fairydarkns](https://t.me/fairydarkns)
+
+Бот продавца для [IziMarket](https://izi.market): автовыдача, автодеактивация лотов, пополнение склада
+и управление магазином из Telegram. Работает через официальное
+[публичное API продавца](https://izi.market/settings/api/docs).
+
+**Автор:** [@fairydarkns](https://t.me/fairydarkns)
 
 ## Возможности
 
