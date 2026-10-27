@@ -2,7 +2,7 @@
 <p align="center">Бот автоматизации магазина на <a href="https://lootly.net">Lootly</a> через официальный
 <a href="https://docs.seller.lootly.net/ru/docs">Seller API</a></p>
 
-## [VPN](https://t.me/fairyvpn_bot) 
+# <p align="center"><a href="https://t.me/fairyvpn_bot">VPN</a></p></p>
 
 Если проект полезен - поставь ⭐  
 Связаться / отблагодарить - Telegram [@fairydarkns](https://t.me/fairydarkns)
